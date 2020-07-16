@@ -1,0 +1,19 @@
+<h1>Lista de posts: </h1>
+<hr>
+</hr>
+<a href="/new_post">Novo post</a>
+<hr>
+</hr>
+<ul>
+    <li>
+        {{#each posts}} {{!-- {{Para cada post, mostre seu título e conteúdo.}} --}}
+
+        <a href="/read_post/{{dataValues.id}}">
+            <h2>{{dataValues.title}}</h2>
+        </a>
+        <a href="/delete_post/{{dataValues.id}}"><button>Delete</button></a>
+        <hr>
+
+        {{/each}}
+    </li>
+</ul>
